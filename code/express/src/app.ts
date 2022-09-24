@@ -1,7 +1,7 @@
 import * as express from "express";
 
 const app: express.Express = express(); //서버
-
+const data = [1,2,3,4];
 const port: number = 8000;
 
 app.get("/test",(req:express.Request, res:express.Response)=>{
