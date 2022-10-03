@@ -55,6 +55,17 @@ Cross-origin resource sharing(CORS): 서비스하고 있지 않은 사이트에�
 
 # Repository 패턴과 레이어 분리
 
+- cats repository 모듈 사용해 주기 위해 module.ts에 등록(providers)
+- service.ts에서도 클래스에 CatsRepository로 의존성 주입 연결
+### Repository 디자인 패턴
+
+- 서비스 로직과 데이터베이스 사이의 중개자(repository)를 둠
+- 여러 서비스 모듈에서 데이터베이스를 접근하고자 할때 서비스 모듈끼리 순환 참조를 하는 것이 아니라, repository에게 일을 맡김 -> 모듈간의 분리
+- 다른 여러 데이터베이스를 사용할때도 중간에서 로직을 분리할 수 있음 (몽고디비, mysql 둘다 사용하는 경우...)
+- repository 또한 dependency injection이 가능한 class임
+
+
+
 # JWT와 로그인 서비스 & 순환 참조 모듈
 
 # passport와 인증 전략 & Custom decorator
