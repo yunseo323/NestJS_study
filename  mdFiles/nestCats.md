@@ -65,8 +65,10 @@ Cross-origin resource sharing(CORS): 서비스하고 있지 않은 사이트에�
 - repository 또한 dependency injection이 가능한 class임
 
 
-
 # JWT와 로그인 서비스 & 순환 참조 모듈
+
+JWT(JSON Web Token): Header, Payload, Signature 로 구성
+- security -> authentication -> @nestjs/passport 설치
 
 # passport와 인증 전략 & Custom decorator
 
